@@ -25,6 +25,7 @@ int main(int argc, const char * argv[]) {
     {
         cout<<array1[i]<<" ";
     }
+    cout<<endl;
     //start sort.....
     for(int right=0;right<num;++right)
     {
@@ -32,24 +33,22 @@ int main(int argc, const char * argv[]) {
         {
             if(array1[k]<array1[right])
             {
+                
+                //ed1
+                int temp=array1[right];
+                for(int e=right-1;e>=k;e--)
+                {
+                    array1[e+1]=array1[e];
+                }
+                array1[k]=temp;
+                
+                ///ed1
                 for(int i=0;i<num;++i)
                 {
                     cout<<array1[i]<<" ";
                 }
                 cout<<endl;
-                swap(array1[k],array1[right]);
-                for(int i=0;i<num;++i)
-                {
-                    cout<<array1[i]<<" ";
-                }
-                cout<<endl;
-                swap(array1[right],array1[k+1]);
-                for(int i=0;i<num;++i)
-                {
-                    cout<<array1[i]<<" ";
-                }
-                cout<<endl;
-
+                
                 
             }
             
