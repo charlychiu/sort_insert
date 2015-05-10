@@ -32,14 +32,13 @@ int main(int argc, const char * argv[]) {
         {
             if(array1[k]<array1[i])
             {
-                int temp;
-                temp=array1[k];
-                array1[k]=array1[i];
-                for(int y=k;y<i;++y)
+                
+                swap(array1[k],array1[i]);
+                for(int y=k;y<i-1;++y)
                 {
                     array1[y+1]=array1[k];
                 }
-                array1[i]=temp;
+                
                 
             }
 
