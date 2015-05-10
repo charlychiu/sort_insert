@@ -25,28 +25,38 @@ int main(int argc, const char * argv[]) {
     {
         cout<<array1[i]<<" ";
     }
-    for(int i=0;i<num;++i)
+    //start sort.....
+    for(int right=0;right<num;++right)
     {
-        int j=i+1;
-        for(int k=0;k<i;++k)
+        for(int k=0;k<right;++k)
         {
-            if(array1[k]<=array1[i])
+            if(array1[k]<array1[right])
             {
-                
-                swap(array1[k],array1[i]);
-                int temp=array1[i];
-                for(int y=k;y<=i-2;++y)
+                for(int i=0;i<num;++i)
                 {
-                    array1[y+2]=array1[y+1];
+                    cout<<array1[i]<<" ";
                 }
-                
-                array1[k+1]=temp;
+                cout<<endl;
+                swap(array1[k],array1[right]);
+                for(int i=0;i<num;++i)
+                {
+                    cout<<array1[i]<<" ";
+                }
+                cout<<endl;
+                swap(array1[right],array1[k+1]);
+                for(int i=0;i<num;++i)
+                {
+                    cout<<array1[i]<<" ";
+                }
+                cout<<endl;
+
                 
             }
             
         }
         
     }
+    //end sort
     cout<<endl<<"sort_selection after:";
     for(int i=0;i<num;++i)
     {
