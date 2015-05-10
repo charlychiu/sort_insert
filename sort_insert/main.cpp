@@ -34,14 +34,16 @@ int main(int argc, const char * argv[]) {
             {
                 
                 swap(array1[k],array1[i]);
-                for(int y=k;y<i-1;++y)
+                int temp=array1[i];
+                for(int y=k;y<=i-2;++y)
                 {
                     array1[y+2]=array1[y+1];
                 }
-                array1[k+1]=array1[i];
+                
+                array1[k+1]=temp;
                 
             }
-
+            
         }
         
     }
