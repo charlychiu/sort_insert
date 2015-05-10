@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
                 int temp;
                 temp=array1[k];
                 array1[k]=array1[i];
-                for(int y=k;k<i;++k)
+                for(int y=k;y<i;++y)
                 {
                     array1[y+1]=array1[k];
                 }
@@ -45,9 +45,12 @@ int main(int argc, const char * argv[]) {
 
         }
         
-        
-        
-        
     }
+    cout<<endl<<"sort_selection after:";
+    for(int i=0;i<num;++i)
+    {
+        cout<<array1[i]<<" ";
+    }
+    
     return 0;
 }
