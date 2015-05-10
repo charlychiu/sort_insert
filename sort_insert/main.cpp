@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
         int j=i+1;
         for(int k=0;k<i;++k)
         {
-            if(array1[k]<array1[i])
+            if(array1[k]<=array1[i])
             {
                 
                 swap(array1[k],array1[i]);
